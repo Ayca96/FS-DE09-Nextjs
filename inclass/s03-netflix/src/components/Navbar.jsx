@@ -18,9 +18,11 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false);
+
+  const{currentUser}=useAuthContext()
  
  
-   const currentUser = { displayName: "ashley miller" };
+  //const currentUser = { displayName: "ashley miller" };
 
 
 
