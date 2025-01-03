@@ -19,7 +19,7 @@ function classNames(...classes) {
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false);
 
-  const{currentUser}=useAuthContext()
+  const{currentUser,logOut}=useAuthContext()
  
  
   //const currentUser = { displayName: "ashley miller" };
@@ -126,6 +126,7 @@ const Navbar = () => {
                           "block px-4 py-2 text-sm text-gray-700 hover:bg-slate-200 cursor-pointer"
                         )}
                         role="button"
+                        onClick={()=>logOut()}
                        
                       >
                         Log out
