@@ -10,11 +10,11 @@ const MovieSection2 = async ({title,type}) => {
 
   return (
  
-    <div>
-      <p>
+    <div className='mb-4'>
+      <p className="text-white  text-md lg:text-2xl font-semibold mb-4">
         {title}
       </p>
-      <div>
+      <div className="grid grid-flow-col gap-2 overflow-x-scroll ">
         {filmler?.map((film)=>(
           <MovieCard key={film.id} {...film}/>
         ))}
