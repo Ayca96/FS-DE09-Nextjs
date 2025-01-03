@@ -1,8 +1,17 @@
+"use client"
 import React from 'react'
 
-const MovieCard = () => {
+const MovieCard = ({id,vote_average,poster_path}) => {
   return (
-    <div>MovieCard</div>
+    <div>
+    <span>
+      {vote_average}
+    </span>
+
+
+
+
+    </div>
   )
 }
 

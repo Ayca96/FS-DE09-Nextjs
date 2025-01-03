@@ -92,7 +92,7 @@ signInWithPopup(auth, provider)
 }
 
 
-const logOut =(auth)=>{
+const logOut =()=>{
 signOut(auth);
 toastSuccessNotify("çıkış başarılı");
 }

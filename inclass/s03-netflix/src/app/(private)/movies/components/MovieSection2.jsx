@@ -1,10 +1,26 @@
+import { getirMovies } from '@/helpers/movieFunctions'
 import React from 'react'
+import MovieCard from './MovieCard'
 
-const MovieSection = () => {
+
+const MovieSection2 = async ({title,type}) => {
+ const filmler= await getirMovies(type)
+ //console.log(filmler);
+ 
+
   return (
-    // MovieCard
-    <div>MovieSection</div>
+ 
+    <div>
+      <p>
+        {title}
+      </p>
+      <div>
+        {filmler?.map((film)=>(
+          <MovieCard key={film.id} {...film}/>
+        ))}
+      </div>
+    </div>
   )
 }
 
-export default MovieSection
+export default MovieSection2
